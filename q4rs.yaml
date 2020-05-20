@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: adhocrspykid4
+ labels:
+  app: web1
+
+spec:
+ selector:
+  matchLabels:
+   adhoc: pykidq4
+ replicas: 1
+
+ template:
+  metadata:
+   name: podq4
+   labels:
+    adhoc: pykidq4
+  spec:
+   containers:
+   - name: pykidc1
+     image: pykid/may2020q1:v1
+     ports:
+     - containerPort: 80
+

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    adhoc: pykidq3
+  name: adhocpod2
+spec:
+  containers:
+  - image: pykid/may2020q1:v1
+    name: adhocpod2
+    ports:
+    - containerPort: 80
+    env:
+     - name: x
+       value: app2
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
