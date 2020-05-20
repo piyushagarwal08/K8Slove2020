@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestap: null
+  labels:
+    run: adhocpod7
+  spec:
+   volumes:
+    - name: adhocoutput
+      hostPath:
+       path: adhocoutput.txt
+       type: File
+   contaiers:
+    - image: alpine
+      name: alpine1
+      volumeMounts:
+       - name: adhocoutput
+         mountPath: /mnt/date.txt
+      command: ["/bin/sh","-c","while true; do date >> /mnt/date.txt; sleep 3;done"]
+      resources: {}
+      restartPolicy: Always
+    status: {}
