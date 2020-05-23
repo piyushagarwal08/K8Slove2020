@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-05-23T16:58:24Z"
+  labels:
+    adhoc: piyushq3
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:adhoc: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:nodePort: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:adhoc: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl.exe
+    operation: Update
+    time: "2020-05-23T17:00:16Z"
+  name: adhocpod2
+  namespace: default
+  resourceVersion: "190417"
+  selfLink: /api/v1/namespaces/default/services/adhocpod2
+  uid: 1fc549a7-e5c4-4036-824a-16283f6e9580
+spec:
+  clusterIP: 10.106.252.194
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31732
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    adhoc: piyushq3
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

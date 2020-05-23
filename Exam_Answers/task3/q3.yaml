@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    adhoc: piyushq3
+  name: adhocpod2
+spec:
+  containers:
+  - image: pykid/exam_task1:v1
+    name: adhocpod2
+    env:
+     - name: x
+       value: app2
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
