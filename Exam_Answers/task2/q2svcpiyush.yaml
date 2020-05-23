@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    adhoc: piyushq2
+  name: q2svcpiyush
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    adhoc: piyushq2
+  type: NodePort
+status:
+  loadBalancer: {}
