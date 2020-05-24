@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-05-24T06:25:41Z"
+  labels:
+    adhoc: piyushq6
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:adhoc: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":9000,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:adhoc: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl.exe
+    operation: Update
+    time: "2020-05-24T06:25:41Z"
+  name: q6svcpiyush
+  namespace: default
+  resourceVersion: "195738"
+  selfLink: /api/v1/namespaces/default/services/adhocpod6
+  uid: 0c469b25-f496-4767-ad0e-ad2cc95b71a5
+spec:
+  clusterIP: 10.108.181.79
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32242
+    port: 9000
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    adhoc: piyushq6
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

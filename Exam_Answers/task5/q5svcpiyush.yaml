@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-05-24T06:15:32Z"
+  labels:
+    adhoc: piyushq5
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:adhoc: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:adhoc: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl.exe
+    operation: Update
+    time: "2020-05-24T06:15:32Z"
+  name: q5svcpiyush
+  namespace: default
+  resourceVersion: "194326"
+  selfLink: /api/v1/namespaces/default/services/adhocdeppiyush5
+  uid: 7281c10d-0042-4398-b635-1f3debb289ab
+spec:
+  clusterIP: 10.105.218.198
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 30389
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    adhoc: piyushq5
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

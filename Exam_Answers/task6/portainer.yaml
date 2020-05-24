@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ namespace: default
+ name: adhocpod6
+ labels:
+  adhoc: piyushq6
+spec:
+ nodeName: minikube
+ containers:
+  - name: adhocpod6
+    image: portainer/portainer
+    ports:
+     - containerPort: 9000
+    

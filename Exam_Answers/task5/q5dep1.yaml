@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  creationTimestamp: null
+  labels:
+    adhoc: piyushq5
+  name: adhocdeppiyush5
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      adhoc: piyushq5
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        adhoc: piyushq5
+    spec:
+      containers:
+      - image: pykid/exam_task1:v1
+        name: exam-task1-wvfr5
+        ports:
+        - containerPort: 80
+        env:
+         - name: x
+           value: app2
+
+        resources: {}
+status: {}
