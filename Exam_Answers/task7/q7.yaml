@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ namespace: default
+ name: adhocpod7
+ labels:
+  adhoc: piyushq7
+spec:
+ containers:
+  - name: adhocpod7
+    image: alpine
+    command: ["/bin/sh","-c","while true;do date >> /mnt/date.txt;sleep 3;done"]
+
+ 
