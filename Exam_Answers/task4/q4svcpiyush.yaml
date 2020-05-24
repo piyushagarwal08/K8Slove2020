@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-05-24T05:58:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:adhoc: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl.exe
+    operation: Update
+    time: "2020-05-24T05:58:32Z"
+  name: q4svcpiyush
+  namespace: default
+  resourceVersion: "192074"
+  selfLink: /api/v1/namespaces/default/services/adhocrspiyush4
+  uid: 38a57be0-ad54-4983-902d-124ac011f30e
+spec:
+  clusterIP: 10.110.77.183
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 30513
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    adhoc: piyushq4
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
